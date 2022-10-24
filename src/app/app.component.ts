@@ -11,5 +11,13 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
-  title = 'the_basics';
+  username = '';
+  showSecret = false;
+  log = [1];
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
+    //this.log.push(new Date());
+  }
 }
